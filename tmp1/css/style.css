@@ -1,0 +1,90 @@
+@import url(./clash-display.css);
+
+body {
+  font-family: clashdisplay;
+}
+.title-underline {
+  margin-bottom: 40px;
+  position: relative;
+}
+.title-underline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 70px;
+  background-color: #0d6efd;
+}
+.title-underline-sm.title-underline::before {
+  left: 0;
+  transform: translate(0%, -50%);
+  width: 45px;
+}
+
+.image-zoom-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.image-zoom {
+  position: relative;
+  overflow: hidden;
+}
+
+.project .box a {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: aqua;
+  text-align: center;
+  line-height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  opacity: 0;
+  z-index: 3;
+  transition: 0.6s;
+}
+.project .box:hover a {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.project .box img {
+  transition: 0.6s;
+}
+.project .box:hover img {
+  transform: scale(1.1);
+}
+
+.testimonials .info::before {
+  content: "";
+  position: absolute;
+  border-width: 20px;
+  border-style: solid;
+  border-color: white transparent transparent;
+  top: 100%;
+  left: 15px;
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(rgba(7, 71, 192, 0.515), rgba(7, 71, 192, 0.515)),
+    url("../img/counter.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.news .img img {
+  transition: 0.3s;
+}
+.news .img img:hover {
+  transform: scale(1.1);
+}
